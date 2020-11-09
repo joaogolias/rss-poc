@@ -26,10 +26,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:backend": "node backend/index.js",
+    "start:backend": "node heroku/backend/index.js",
     "build": "react-scripts build",
-    "build:backend": "tsc backend/index.ts --module commonjs --esModuleInterop",
-    "deploy:backend": "yarn build:backend && git add --all && git commit -m 'building backend' && git push heroku-backend master && rm backend/index.js && git add backend/index.js && git commit -m 'removing built file'" ,
+    "build:backend": "tsc heroku/backend/index.ts --module commonjs --esModuleInterop",
+    "deploy:backend": "export STACK=back && yarn gen:procfile && yarn build:backend && git add --all && git commit -m 'building backend' && git push heroku-backend master && rm heroku/backend/index.js && git add heroku/backend/index.js && git commit -m 'removing built file'" ,
+    "gen:procfile": "tsc heroku/genProcfile.ts --module commonjs --esModuleInterop && node heroku/genProcfile.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
