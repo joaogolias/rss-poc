@@ -92,6 +92,10 @@ app.get("/", async (_: any, res) => {
   }
   
 })
-app.listen("8080", () => {
-  console.log("Running on 8080")
+
+const port = 3000
+
+console.log("process.env.PORT: ", process.env.PORT)
+app.listen(port, () => {
+  console.log("Running on ", port)
 })
