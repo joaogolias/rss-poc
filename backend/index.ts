@@ -82,6 +82,6 @@ app.get("/rss", async (_: any, res) => {
     items: result
   })
 })
-app.listen("3000", () => {
-  console.log("Running on 3005")
+app.listen("8080", () => {
+  console.log("Running on 8080")
 })
