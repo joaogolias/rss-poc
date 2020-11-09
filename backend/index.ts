@@ -28,7 +28,7 @@ interface RSSInput {
 
 console.log("heeeere")
 
-app.get("/", async (_: any, res) => {
+app.get("/rss", async (_: any, res) => {
   console.log("\n\nabc\n\n")
   try {
     const parseFeeds = async (inputs: RSSInput[]) => {
