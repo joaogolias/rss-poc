@@ -1,6 +1,6 @@
-import * as express from "express";
-import * as Parser from "rss-parser";
+import express from "express";
 import { parse } from 'node-html-parser';
+import Parser from "rss-parser";
 
 const app = express()
 
@@ -26,7 +26,7 @@ interface RSSInput {
   defaultThumbnail: string
 }
 
-app.get("/rss", async (_, res) => {
+app.get("/rss", async (_: any, res) => {
   const parseFeeds = async (inputs: RSSInput[]) => {
     const result = await Promise.all(
       inputs.map(async (input) => {
@@ -40,7 +40,7 @@ app.get("/rss", async (_, res) => {
             }
             const rootHtml = parse(item.content)
             const img = rootHtml.querySelector("img")
-            const src = img?.rawAttributes["src"]
+            const src = img && img.rawAttributes["src"]
             return {
               imageSource: src || input.defaultThumbnail,
               ...item,

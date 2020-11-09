@@ -26,7 +26,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:backend": "node backend/index.js",
     "build": "react-scripts build",
+    "build:backend": "tsc backend/index.ts --module commonjs --esModuleInterop",
+    "deploy:backend": "yarn build:backend && git add backend/index.js && git commit -m 'building backend' && git push heroku-backend master && rm backend/index.js && git add backend/index.js && git commit -m 'removing built file'" ,
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
