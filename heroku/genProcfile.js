@@ -21,5 +21,5 @@ var __importStar = (this && this.__importStar) || function (mod) {
 exports.__esModule = true;
 var fs = __importStar(require("fs"));
 fs.writeFileSync("Procfile", process.env.STACK === "front" ?
-    'web: yarn start:backend'
+    'web: yarn start:frontend'
     : 'web: yarn start:backend');
