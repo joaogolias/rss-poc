@@ -26,6 +26,8 @@ interface RSSInput {
   defaultThumbnail: string
 }
 
+console.log("heeeere")
+
 app.get("/rss", async (_: any, res) => {
   console.log("\n\nabc\n\n")
   try {
