@@ -92,6 +92,6 @@ app.get("/", async (_: any, res) => {
   }
   
 })
-app.listen("3000", () => {
+app.listen("8080", () => {
   console.log("Running on 8080")
 })
