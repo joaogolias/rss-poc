@@ -22,6 +22,7 @@ const Rss = () => {
   console.log()
   return (
     <div className="main-container">
+      <p> POC - RSS </p>
       {
         newsList.map((news) => {
           return (
