@@ -82,6 +82,6 @@ app.get("/rss", async (_, res) => {
     items: result
   })
 })
-app.listen("3005", () => {
+app.listen("3000", () => {
   console.log("Running on 3005")
 })
