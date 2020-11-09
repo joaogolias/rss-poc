@@ -1,2 +1,2 @@
-web: yarn ts-node front.js
-api: yarn start:backend
+aa: yarn ts-node front.js
+web: yarn start:backend
