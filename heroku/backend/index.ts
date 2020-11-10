@@ -73,7 +73,7 @@ app.get("/rss", async (_: any, res) => {
   
     result.unshift({
       imageSource: "asioji",
-      title: "GOLI, DEU BOM",
+      title: "GOLIIIIIIIIIII, DEU BOM",
       content: "<div> </div>",
       contentSnippet: "OLAA"
     })
