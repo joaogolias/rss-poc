@@ -12,7 +12,6 @@ const Rss = () => {
   const [newsList, setNews] = useState<News[]>([])
   useEffect(() => {
     (async () => {
-      // http://localhost:3005/rss
       const res = await fetch("https://rss-poc-backend.herokuapp.com/rss", {
         method: "GET"
       })
